@@ -99,8 +99,7 @@ export default function Home() {
             Pick any challenge below to test an endpoint with a simple interactive form.
           </p>
           <p className="afo-muted text-sm">
-            API calls are handled in <span className="font-mono">DataService.js</span> and proxied through
-            Next.js. Set <span className="font-mono">API_BASE_URL</span> to choose your backend target.
+            Make your choice!
           </p>
         </Card>
 
