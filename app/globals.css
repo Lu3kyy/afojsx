@@ -1,8 +1,16 @@
 @import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #121826;
+  --foreground: #eaf2ff;
+  --surface: #1a2235;
+  --surface-soft: #212b40;
+  --border-soft: #33415f;
+  --muted: #b8c4e6;
+  --accent: #8fd3ff;
+  --accent-strong: #70b8ff;
 }
 
 @theme inline {
@@ -12,15 +20,38 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at 15% 10%, #1e2740 0%, transparent 40%),
+    radial-gradient(circle at 85% 90%, #28324f 0%, transparent 35%),
+    var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.afo-shell {
+  color: var(--foreground);
+}
+
+.afo-panel {
+  border: 1px solid var(--border-soft);
+  background: linear-gradient(160deg, var(--surface) 0%, var(--surface-soft) 100%);
+  box-shadow: 0 10px 30px rgba(5, 8, 15, 0.35);
+}
+
+.afo-title {
+  color: #f4f7ff;
+}
+
+.afo-muted {
+  color: var(--muted);
+}
+
+.afo-link-btn {
+  background: linear-gradient(90deg, var(--accent) 0%, #b7f0d3 100%);
+  color: #0e1a2f;
+}
+
+.afo-link-btn:hover {
+  background: linear-gradient(90deg, var(--accent-strong) 0%, #9be9c3 100%);
 }
